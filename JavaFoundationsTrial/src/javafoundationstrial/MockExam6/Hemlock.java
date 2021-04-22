@@ -7,12 +7,14 @@ package javafoundationstrial.MockExam6;
 
 public class Hemlock {
 
-    static StringBuffer sb;
+  static  StringBuffer sb;
     StringBuffer sb2;
 
     public static void main(String[] args) {
         sb = sb.append(new Hemlock().go(new StringBuffer("hey")));//
         System.out.println(sb);
+        System.out.println(sb);
+
     }
 
     {
@@ -21,11 +23,16 @@ public class Hemlock {
 
     StringBuffer go(StringBuffer s) {
         System.out.println(s + " oh " + sb2);//hey oh hi
-        return new StringBuffer("ey");
+        return new StringBuffer("ey").append("hola");
+    }
+
+     StringBuffer go2() {
+        System.out.println(sb2);
+        return sb2;
     }
 
     static {
-        sb = new StringBuffer("yo ");
+        sb = new StringBuffer("yo ").append("mundo");
     }
-    
+
 }

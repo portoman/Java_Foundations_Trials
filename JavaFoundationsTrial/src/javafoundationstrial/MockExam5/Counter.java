@@ -27,5 +27,6 @@ public class Counter {
         arr[2] = "";
         arr[3] = "Java";
         System.out.println(getCount(arr));
+        
     }
 }

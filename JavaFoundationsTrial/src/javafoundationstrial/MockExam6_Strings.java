@@ -51,16 +51,17 @@ public class MockExam6_Strings {
         System.out.println("one = " + one);
         System.out.println("two = " + two);
         //When the last line of main method is reached, how many objects are eligible for GC? 1 object
+        //The object "someString" is always referenced by the String Pooling
 
         //Question 8
-        String s1 = "Fred";
+        String s1 = "Fred";//"Fred"
         s1 = s1 + "47";//"Fred47"
         s1 = s1.substring(2, 5);//"ed4"
         s1 = s1.toUpperCase();//"ED4"
-        //How many objects are created? 3
+        //How many objects are created? 3. The String Pooling creates the object String at the beginning when the class is uploaded.
 
         //Question 9
-        String s2 = "FRED";
+        String s2 = "FRED";//"FRED"
         s2 = s2 + "47";//"FRED47"
         s2 = s2.substring(2, 5);//"ED4"
         s2 = s2.toUpperCase();//"ED4"
@@ -211,8 +212,8 @@ public class MockExam6_Strings {
         //Question 27
         String s10 = new String("java");
         StringBuilder s20 = new StringBuilder("java");
-        replaceString(s10);
-        replaceStringBuilder(s20);
+        replaceString(s10);//Is not assigned to any String
+        replaceStringBuilder(s20);//StringBuilders are not need to be assigned
         System.out.println(s10 + s20);
     }
 
@@ -225,7 +226,7 @@ public class MockExam6_Strings {
     }
 
     static void replaceString(String s) {
-        s = s.replace('j', 'l');
+         s = s.replace('j', 'l');
     }
 
     static void replaceStringBuilder(StringBuilder s) {
