@@ -13,16 +13,16 @@ public class Sphere {
 
     //<editor-fold defaultstate="collapsed" desc="Estado: Atributos/Campos">
     private double radius;
-
+    private static int counter = 0;
 //</editor-fold>
     //<editor-fold defaultstate="collapsed" desc="Comportamiento: Métodos/Operaciones">
-    
-    //<editor-fold defaultstate="collapsed" desc="Constructores">
 
+    //<editor-fold defaultstate="collapsed" desc="Constructores">
     public Sphere(double radius) {
         this.setRadius(radius);
+        Sphere.counter++;
     }
-    
+
 //</editor-fold>
     //<editor-fold defaultstate="collapsed" desc="Getter/Setter">
     public double getRadius() {
@@ -30,10 +30,14 @@ public class Sphere {
     }
 
     public void setRadius(double radius) {
-         if(radius<=0){
-            throw new IllegalArgumentException(String.format("Valor %f no valido para el radio de un esfera",radius));
+        if (radius <= 0) {
+            throw new IllegalArgumentException(String.format("Valor %f no valido para el radio de un esfera", radius));
         }
         this.radius = radius;
+    }
+
+    public static int getCounter() {
+        return Sphere.counter;
     }
 //</editor-fold>
 
@@ -44,6 +48,5 @@ public class Sphere {
     public double getVolume() {
         return 4d / 3 * Math.PI * Math.pow(this.radius, 3);
     }
-
 //</editor-fold>
 }

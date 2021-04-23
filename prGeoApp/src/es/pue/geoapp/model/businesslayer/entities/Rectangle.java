@@ -14,6 +14,7 @@ public class Rectangle {
     //<editor-fold defaultstate="collapsed" desc="Estado: Atributos/Campos">
     private double base;
     private double height;
+    private static int counter = 0;
 //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Comportamiento: Métodos/Operaciones">
@@ -46,12 +47,13 @@ public class Rectangle {
     //<editor-fold defaultstate="collapsed" desc="Constructores">
     
     public Rectangle(){
-        
+        this(0,0);
     }
 
     public Rectangle(double base, double height) {
         this.setBase(base);
         this.setHeight(height);
+        Rectangle.counter++;
     }
     public Rectangle(double base){
         this();
@@ -67,6 +69,12 @@ public class Rectangle {
     public double getPerimeter(){
         return (2*this.base)+(2*this.height);
     }
+
+    public static int getCounter() {
+        return Rectangle.counter;
+    }
+    
+    
 //</editor-fold>
 
     @Override

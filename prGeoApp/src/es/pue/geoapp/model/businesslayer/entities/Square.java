@@ -10,10 +10,13 @@ package es.pue.geoapp.model.businesslayer.entities;
  * @author portb
  */
 public class Square {
+
+   
     //<editor-fold defaultstate="collapsed" desc="Estado: Atributos/Campos">
 
     private double side;
     private final double SIDES=4.0;
+    private static int counter = 0;
 //</editor-fold>
     //<editor-fold defaultstate="collapsed" desc="Comportamiento: Métodos/Operaciones">
     //<editor-fold defaultstate="collapsed" desc="Getter/Setter">
@@ -24,11 +27,15 @@ public class Square {
     public void setSide(double side) {
         this.side = side;
     }
+     public static int getCounter() {
+        return Square.counter;
+    }
+    
 //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Constructores">
     public Square(){
-        
+        this(0);
     }
 
     public Square(double side) {
@@ -37,6 +44,7 @@ public class Square {
         }
         
         this.setSide(side);
+        counter++;
     }
     
     

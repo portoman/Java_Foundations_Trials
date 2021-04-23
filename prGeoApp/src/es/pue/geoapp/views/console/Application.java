@@ -1,5 +1,6 @@
 package es.pue.geoapp.views.console;
 
+import es.pue.geoapp.model.businesslayer.entities.Color;
 import es.pue.geoapp.model.businesslayer.entities.*;
 
 public class Application {
@@ -19,7 +20,10 @@ public class Application {
         
         Rectangle r2 = new Rectangle();
         
-        Square sq3=new Square(-7);
-
+        Color c1=new Color();
+        Color c2=new Color();
+        
+        System.out.printf("Color counter is: %d \n" , Color.getCounter());
+        
     }
 }
