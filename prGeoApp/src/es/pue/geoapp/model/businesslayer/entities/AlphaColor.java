@@ -9,33 +9,38 @@ package es.pue.geoapp.model.businesslayer.entities;
  *
  * @author portb
  */
-public class AlphaColor extends Color{
-    
+public class AlphaColor extends Color {
+
     //<editor-fold defaultstate="collapsed" desc="Estado: Atributos/Campos">
     private double alpha;
-    public static final double MAX_ALPHA=1.0;
-    public static final double MIN_ALPHA=0.0;
-    
+    public static final double MAX_ALPHA = 1.0;
+    public static final double MIN_ALPHA = 0.0;
+
 //</editor-fold>
-    
     //<editor-fold defaultstate="collapsed" desc="Comportamiento: Métodos/Operaciones">
-    
     //<editor-fold defaultstate="collapsed" desc="Getter/Setter">
-     public double getAlpha() {
+    public double getAlpha() {
         return alpha;
     }
 
     public void setAlpha(double alpha) {
-        if(alpha<MIN_ALPHA ||alpha >MAX_ALPHA){
+        if (alpha < MIN_ALPHA || alpha > MAX_ALPHA) {
             throw new IllegalArgumentException(String.format("Valor %.2f no válido como transparencia.", alpha));
         }
         this.alpha = alpha;
     }
-    
-    
-//</editor-fold>
-    
-//</editor-fold>
 
-   
+//</editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="Constructor">
+    public AlphaColor(int red, int green, int blue, double alpha) {
+        super(red, green, blue);
+        this.setAlpha(alpha);
+    }
+
+    public AlphaColor(int red, int green, int blue) {
+        this(red, green, blue, AlphaColor.MIN_ALPHA);
+    }
+
+//</editor-fold>
+//</editor-fold>
 }
