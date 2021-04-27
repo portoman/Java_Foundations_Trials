@@ -16,6 +16,10 @@ public class JavaFoundationsTrial {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+         for(int i=5;;i++){
+            System.out.println("Hola");
     }
     
+}
 }

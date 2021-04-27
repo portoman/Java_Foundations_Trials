@@ -15,7 +15,7 @@ public class MockExam6_Strings {
 
         //Question 1
         String s = new String("5");
-        System.out.println(1 + 10 + s + 1 + 10);//155110
+        System.out.println(1 + 10 + s + 1 + 10);//115110
 
         //Question 2
         System.out.println("Result: " + 2 + 3 + 5);//Result: 235
@@ -93,9 +93,13 @@ public class MockExam6_Strings {
         System.out.println(s02 == s03);//true
         System.out.println(s01.equals(s02));//true
         System.out.println(s01.compareTo(s02));//0
-        System.out.println(s01);
-        System.out.println(s02);
-        System.out.println(s03);
+        String s004 = "hallo";
+        String s005 = "hillo";
+        System.out.println(s02.equals(s004));//false
+        System.out.println(s02.equals(s005));//false
+
+        System.out.println(s02.compareTo(s004));//4
+        System.out.println(s02.compareTo(s005));//-4
 
         //Question 14
         String $s1 = "hi";
@@ -192,12 +196,12 @@ public class MockExam6_Strings {
         String s15 = "abc";
         String s25 = s15;
         s15 += "d";//"abcd"
-        System.out.println(s15 + " " + s25 + " " + (s15 == s25));//Strings create new objects each time
+        System.out.println("Question 24: " + s15 + " " + s25 + " " + (s15 == s25));//Strings create new objects each time
 
         StringBuffer sb1 = new StringBuffer("abc");
         StringBuffer sb2 = sb1;
         sb1.append("d");//"abcd"
-        System.out.println(sb1 + " " + sb2 + " " + (sb1 == sb2));//StringBuilder can be modified(sb1 & sb2 points to the same object)
+        System.out.println("Question 24: " + sb1 + " " + sb2 + " " + (sb1 == sb2));//StringBuilder can be modified(sb1 & sb2 points to the same object)
 
         //Question 25
         String s2_ = "action";
@@ -215,6 +219,8 @@ public class MockExam6_Strings {
         replaceString(s10);//Is not assigned to any String
         replaceStringBuilder(s20);//StringBuilders are not need to be assigned
         System.out.println(s10 + s20);
+        
+        
     }
 
     static void m(String s1) {
@@ -226,7 +232,7 @@ public class MockExam6_Strings {
     }
 
     static void replaceString(String s) {
-         s = s.replace('j', 'l');
+        s = s.replace('j', 'l');
     }
 
     static void replaceStringBuilder(StringBuilder s) {

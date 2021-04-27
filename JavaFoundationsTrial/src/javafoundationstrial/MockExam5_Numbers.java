@@ -40,22 +40,22 @@ public class MockExam5_Numbers {
         byte b1 = 100;
         b1 *= 1;
 
-//        byte b2 = 1;
-//        b2=b2+1;
+        byte b2 = 1;
+//        b2= b2+1;
 //        System.out.println("b2 = " + b2);
         int i = 128;
 
         //Question 5: Which of the given code snippets will compile?
-//        long id = 6;// Possible lossy conversion from long to int 
-//        int i2 = id;
-//        float f = 6.32f;// Possible lossy conversion from float to int 
-//        int i3 = f;
+        long id = 6;
+//        int i2 = id;// Possible lossy conversion from long to int 
+        float f = 6.32f;
+//        int i3 = f;// Possible lossy conversion from float to int 
         char c2 = 'A';
         int i4 = c2;
         System.out.println("i4 = " + i4);
 
         int i5 = 0;
-        byte b2 = (byte) i5;
+        byte b02 = (byte) i5;
 
         //Question 6
         float fValue = 120;
@@ -97,7 +97,7 @@ public class MockExam5_Numbers {
 
         //Question 10
         char c3 = 320;
-        float f = 320;
+        float f2 = 320;
         double d2 = 320;
 //        byte b3 = 320;Possible lossy conversion from int to byte
         float f6 = 22.0f / 7.0f;
@@ -111,7 +111,7 @@ public class MockExam5_Numbers {
         short s = 12;
         long g = 012;
         //int i6 = (int) false;//Boolean cannot be converted to int
-        float f2 = -123;
+        float f02 = -123;
 //        float d3 = 0 * 1.5;//Possible lossy conversion from fdouble to float
 
         //Question 13
@@ -119,19 +119,19 @@ public class MockExam5_Numbers {
         float f7 = 2.3f;
         double d3 = 2.7;
         i6 = ((int) Math.ceil(f7)) * ((int) Math.round(d3));
-        System.out.println("f7 = " + f7);
-        System.out.println("d3 = " + d3);
-        System.out.println(i6);
+        System.out.println("f7 = " + f7);//3
+        System.out.println("d3 = " + d3);//3
+        System.out.println(i6);//9
 
         //Question 14
         double num = -25.67;
-        System.out.println(Math.abs(num));
+        System.out.println(Math.abs(num));//25,67
 
         //Question 16
         int a2 = 10;
         long b3 = 20;
         short c4 = 30;
-        System.out.println(++a2 + b3++ * c4);
+        System.out.println(++a2 + b3++ * c4);//11+600=611
 
         //Question 17
         int a4 = 3;
@@ -157,7 +157,7 @@ public class MockExam5_Numbers {
         int bin = 0b1111_0000_1100_1100;
 
         //Question 21
-        // int bi1 = (binary) 100111000100000;
+//         int bi1 = (binary) 100111000100000;
         //int bi2 = 01001110_00100000;
         int bi3 = 0b01001110_00100000;//Binary always prefixed with 0b or 0B
         //int bi4 = b1001110_00100000;
@@ -279,6 +279,7 @@ public class MockExam5_Numbers {
         3.10.4 Character Literals
         
         UTF-16 values: from \u0000 to \uffff
+        Char has 16 bits
         
         Examples of char literals: 
         
@@ -294,7 +295,7 @@ public class MockExam5_Numbers {
          */
         //Question 24
         int i1 = 1, i2 = 2, i31 = 3;
-        int i41 = i1 + (i2 = i31);
+        int i41 = i1 + (i2 = i31);//1+3
         System.out.println(i41); //i41=4
 
         //Question 25
@@ -335,6 +336,23 @@ public class MockExam5_Numbers {
         int ii, jj = 0;
 //        if(ii++ == ++jj){//Variable ii hasn´t been iniziated, only declared
         System.out.println("True: ");
+        
+        //Math class round examples:
+        
+        //Round: Nearest integer number 
+        System.out.println("Round of 2,81: "+Math.round(2.81));//3
+        System.out.println("Round of 2,48: "+Math.round(2.48));//2
+        
+        //Ceil: Upper integer number
+        System.out.println("Ceil of 2,81: "+Math.ceil(2.81));//3
+        System.out.println("Ceil of 2,48: "+Math.ceil(2.48));//3
+        
+        //Floor: Lower integer number
+        System.out.println("Floor of 2,81: "+Math.floor(2.81));//2
+        System.out.println("Floor of 2,48: "+Math.floor(2.48));//2
+        
+       
+        }
     }
 
-}
+

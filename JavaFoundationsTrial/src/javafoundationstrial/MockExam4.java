@@ -13,6 +13,7 @@ public class MockExam4 {
 
     public static void main(String[] args) {
 
+        
         //Question 3
         int x = 6;
 //        doStuff(x);//Non static method cannot be referenced from a static context
