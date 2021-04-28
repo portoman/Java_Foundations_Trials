@@ -59,9 +59,10 @@ public class MockExam5_Numbers {
 
         //Question 6
         float fValue = 120;
-//        int iValue = fValue;//Possible lossy conversion from float to int 
+//        long iValue = fValue;//Possible lossy conversion from float to int 
         double dValue = fValue;
 //        long lValue = fValue;//Possible lossy conversion from float to long 
+//          -> Floating numbers cannot be implicit narrowing
 
         int iValue2 = 20;
         float fValue2 = iValue2;
@@ -77,6 +78,8 @@ public class MockExam5_Numbers {
 
 //        long lValue2=fValue3;//Possible lossy conversion from float to long
 //        long lValue3=dValue3;//Possible lossy conversion from double to long
+
+
         //Question 8
         float flt = 100F;
         float flt2 = (float) 1_11.00;
@@ -96,7 +99,7 @@ public class MockExam5_Numbers {
         float f5 = 4;
 
         //Question 10
-        char c3 = 320;
+        char c3 = 320; //Chars can has max value of 2^16-1 only positive values
         float f2 = 320;
         double d2 = 320;
 //        byte b3 = 320;Possible lossy conversion from int to byte
