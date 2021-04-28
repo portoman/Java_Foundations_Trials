@@ -26,7 +26,7 @@ public class MockExam4 {
             System.out.println(args.length + " arguments");
         }
 
-        //Question 8
+        //Question 9
         System.out.println(true ^ false);//true
         System.out.println(false ^ false);//false
         System.out.println(false ^ true);//true

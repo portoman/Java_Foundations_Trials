@@ -71,7 +71,7 @@ public class MockExam6_Strings {
         String product = "Pen";
         product.toLowerCase();
         product.concat(" BOX".toLowerCase());
-        //System.out.println(product.substring(4, 6));//throws java.lang.StringIndexOutOfBoundsException
+//        System.out.println(product.substring(4, 6));//throws java.lang.StringIndexOutOfBoundsException
 
         //Question 11
         String inputFromConsole = " betaTEST ";
@@ -165,14 +165,14 @@ public class MockExam6_Strings {
 
         //Question 21
         String $$str = "A.B.C!";
-        System.out.println($$str.replaceAll(".", "a").replace("!", "?"));//,,,,,,,,
+        System.out.println($$str.replaceAll(".", ",").replace("!", "?"));//,,,,,,,,
 
         //Question 22
         String s4 = "blooper";
         StringBuilder sb4 = new StringBuilder(s4);
         sb4.append(s4.substring(4))//"blooperper
                 .delete(3, 5);//bloerper
-        System.out.println(sb4);
+        System.out.println("sb4 = " + sb4);
         StringBuilder sb5 = new StringBuilder(sb4.substring(1, 3));
         System.out.println("sb5 = " + sb5);
         System.out.println("sb4 = " + sb4);
@@ -219,8 +219,7 @@ public class MockExam6_Strings {
         replaceString(s10);//Is not assigned to any String
         replaceStringBuilder(s20);//StringBuilders are not need to be assigned
         System.out.println(s10 + s20);
-        
-        
+
     }
 
     static void m(String s1) {
