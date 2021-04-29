@@ -260,7 +260,7 @@ public class MockExam5_Numbers {
         
              The compilator always assumes that the floating numbers are double
         
-        Float:
+        Float->16 bits:
         
         Max decimal value:     3.4028235e38f
         Max hexadecimal value: 0x1.fffffeP+127f
@@ -268,7 +268,7 @@ public class MockExam5_Numbers {
         Min decimal value:     1.4e-45f.
         Min hexadecimal value: 0x0.000002P-126f and 0x1.0P-149f
         
-        Double:
+        Double -> 32 bits:
         
         Max decimal value:     1.7976931348623157e308
         Max hexadecimal value: 0x1.f_ffff_ffff_ffffP+1023.
