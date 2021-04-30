@@ -237,4 +237,5 @@ public class MockExam6_Strings {
     static void replaceStringBuilder(StringBuilder s) {
         s.append("c");
     }
+    //Examen aprobado!!
 }
